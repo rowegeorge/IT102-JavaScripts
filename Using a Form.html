@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Test 5</title>
+<script language="JavaScript">
+function reveal(){
+var lifeMeaning = document.theForm.elements[0].value
+document.write("And...(drumroll) the meaning of life is ..." + lifeMeaning + "!!")
+}
+</script>
+</head>
+<body>
+<form name="theForm">
+What's the meaning of life?
+<input type="text">
+<input type="button" value="Submit" onClick="reveal()">
+</form>
+</body>
+</html>

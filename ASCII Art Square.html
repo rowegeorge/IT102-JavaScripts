@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+size = prompt("Enter a number between 3 and 30:");
+
+if (size > 30) {
+document.write("That number is too big!")
+}
+if (size < 3) {
+	document.write("That number is too small!")
+}
+for (outer = 0; outer < size; outer++) {
+   document.write("</br>");
+   for (inner = 0; inner < size; inner++) {
+      document.write("*");
+   }
+}
+</script>
+
+</body>
+</html>

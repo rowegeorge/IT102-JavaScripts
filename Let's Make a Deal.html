@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>There are 3 doors in front of you. You have to go through one of them. Behind one of the doors, a fire is raging; behind another one, a gunman lurks; behind the last one, there are three lions that haven't eaten in years. Unfortunately, you don't know what's behind any of the doors. Can you survive what's behind the door you choose?
+<p>Open a door and seal your fate... or not.</p>
+
+<select id="mySelect" onchange="myFunction()">
+ <option>Choose your fate:
+ <option value="Door 1">Door 1 <!-- lions -->
+ <option value="Door 2">Door 2 <!-- fire -->
+ <option value="Door 3">Door 3 <!-- gunman -->
+</select>
+<script>
+function myFunction(){
+var door = document.getElementById("mySelect").value;
+var message = "<p>You've selected " + door + ".</p>";
+switch (door) {
+
+ case "Door 1":
+  message += "<p>Hurrah! You've found three lions, but they're all emaciated carcasses of what were once ferocious lions! They starved to death because they hadn't eaten for years! You survive!</p>";
+ break;
+ 
+ case "Door 2":
+ message += "<p>Sorry, but you've been consumed by raging fire, if the smoke didn't kill you first.</p>";
+ break;
+
+ case "Door 3":
+ message += "<p>Sorry, but you've been murdered by a gunman who was quietly waiting for the next idiot to open the door.</p>";
+ break;
+
+ default:
+ message += "<p>Sorry, please try again.</p>";
+ break;
+ }
+document.getElementById("demo").innerHTML = message;
+}
+</script>
+
+<p id="demo"></p>
+
+</body>
+</html>
